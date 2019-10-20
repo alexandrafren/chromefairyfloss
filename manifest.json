@@ -1,6 +1,21 @@
 {
-    "name": "Fairy Floss Theme",
-    "version": "1.0",
+	"manifest_version" : 2,
+	"name" : "Fairy Floss Theme",
+    "version" : "1.0",
     "description": "This extension allows you to view any webpage in a whimsical fairy-floss theme",
-    "manifest_version": 2
+    "background" : {
+                  "scripts" : ["background.js"],
+                  "persistent": false
+    },
+    "permissions": ["activeTab","declarativeContent","storage"],
+    "icons": {
+        "16": "icon.png",
+        "32": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "page_action": {
+        "default_popup": "popup.html"
+    }
 }
+
